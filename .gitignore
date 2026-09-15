@@ -12,4 +12,6 @@ sdkconfig.old
 
 # 测试临时产物
 tests/host/*.gcov
+tests/host/test_led_fsm
+tests/host/test_ap_logic
 /tmp/hosttest
