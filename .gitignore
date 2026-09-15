@@ -1,0 +1,15 @@
+# 构建产物
+build/
+build_boot/
+sdkconfig
+sdkconfig.old
+*.gcda
+*.gcno
+*.gcov
+*.o
+*.elf
+*.bin
+
+# 测试临时产物
+tests/host/*.gcov
+/tmp/hosttest
