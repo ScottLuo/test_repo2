@@ -1,0 +1,35 @@
+#
+# SoftAP LED 演示程序可配置项
+# 这些配置项在 main 组件目录下被 CMake/Make 构建系统拾取。
+#
+menu "SoftAP LED Demo Configuration"
+
+    config AP_WIFI_SSID
+        string "SoftAP SSID"
+        default "ESP8266-Demo"
+        help
+            SoftAP 的网络名称（SSID）。设备连接时以此名称搜索。
+
+    config AP_WIFI_PASSWORD
+        string "SoftAP Password (WPA2)"
+        default "12345678"
+        help
+            SoftAP 的 WPA2 密码（8~63 字符）。
+            若留空（""），AP 将使用开放（无加密）模式，便于调试。
+
+    config AP_MAX_CONN
+        int "Max Station Connections"
+        default 4
+        range 1 4
+        help
+            SoftAP 允许的最大同时连接设备数（ESP8266 支持 1~4）。
+
+    config AP_LED_GPIO
+        int "LED GPIO Number (active-low)"
+        default 2
+        range 0 16
+        help
+            板载状态 LED 所连接的 GPIO 编号。
+            NodeMCU 板载 LED 通常接 GPIO2（低电平点亮）。
+
+endmenu

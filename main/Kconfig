@@ -1,0 +1,4 @@
+#
+# 本组件（main）的 Kconfig 配置项。
+# 项目级可配置项统一放在 main/Kconfig.projbuild。
+#
