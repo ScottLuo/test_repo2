@@ -1,6 +1,5 @@
-#
-# main 组件 Makefile（Make 构建方式使用）
-# 显式声明组件源文件与头文件目录，避免默认约定遗漏。
-#
-COMPONENT_SRCS := main.c led_control.c led_fsm.c ap_logic.c wifi_ap.c
+# main 组件（Make 构建方式使用）
+COMPONENT_SRCS := main.c led_control.c led_fsm.c ap_logic.c wifi_ap.c led_flash.c http_service.c
 COMPONENT_ADD_INCLUDE_DIRS := .
+# HTTP 服务依赖 esp_http_server 组件
+COMPONENT_DEPENDS := esp_http_server
